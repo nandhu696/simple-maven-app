@@ -1,4 +1,5 @@
 
+
 package com.example;
 
 import org.junit.Test;
@@ -7,17 +8,23 @@ import static org.junit.Assert.assertEquals;
 public class AppTest {
 
     @Test
-    public void testAddition() {
-        assertEquals(30, App.add(10, 20));
+    public void testEvenNumber() {
+        assertEquals("Even", App.checkEvenOdd(10));
     }
 
     @Test
-    public void testAdditionWithNegativeNumber() {
-        assertEquals(5, App.add(10, -5));
+    public void testOddNumber() {
+        assertEquals("Odd", App.checkEvenOdd(7));
     }
 
     @Test
-    public void testAdditionWithZero() {
-        assertEquals(10, App.add(10, 0));
+    public void testZero() {
+        assertEquals("Even", App.checkEvenOdd(0));
+    }
+
+    @Test
+    public void testNegativeEvenNumber() {
+        assertEquals("Even", App.checkEvenOdd(-4));
     }
 }
+

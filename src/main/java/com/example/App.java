@@ -1,12 +1,17 @@
 
+
 package com.example;
 
 public class App {
-    public static int add(int a, int b) {
-        return a + b;
+    public static String checkEvenOdd(int number) {
+        if (number % 2 == 0) {
+            return "Even";
+        }
+        return "Odd";
     }
 
     public static void main(String[] args) {
-        System.out.println("Sum = " + add(10, 20));
+        int number = 7;
+        System.out.println(number + " is " + checkEvenOdd(number));
     }
 }
