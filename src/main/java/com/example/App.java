@@ -1,17 +1,26 @@
-
-
 package com.example;
-
+ 
 public class App {
-    public static String checkEvenOdd(int number) {
-        if (number % 2 == 0) {
-            return "Even";
+    public static String fibonacci(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Number of terms cannot be negative");
         }
-        return "Odd";
+        StringBuilder result = new StringBuilder();
+        long a = 0;
+        long b = 1;
+        for (int i = 0; i < n; i++) {
+            if (i > 0) {
+                result.append(" ");
+            }
+            result.append(a);
+            long next = a + b;
+            a = b;
+            b = next;
+        }
+        return result.toString();
     }
-
+ 
     public static void main(String[] args) {
-        int number = 7;
-        System.out.println(number + " is " + checkEvenOdd(number));
+        System.out.println(fibonacci(7));
     }
 }
