@@ -1,12 +1,23 @@
+
 package com.example;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AppTest {
+
     @Test
-    public void testAdd() {
-        App app = new App();
-        assertEquals(5, app.add(2, 3));
+    public void testAddition() {
+        assertEquals(30, App.add(10, 20));
+    }
+
+    @Test
+    public void testAdditionWithNegativeNumber() {
+        assertEquals(5, App.add(10, -5));
+    }
+
+    @Test
+    public void testAdditionWithZero() {
+        assertEquals(10, App.add(10, 0));
     }
 }
